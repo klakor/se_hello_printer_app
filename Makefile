@@ -11,5 +11,4 @@ run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
 test:
-	#.PHONY: tests
 	PYTHONPATH=. py.test --verbose -s
