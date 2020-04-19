@@ -11,8 +11,12 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   # aktywowanie hermetycznego środowiska
   $ source .venv/bin/activate
+
   $ pip install -r requirements.txt
   $ pip install -r test_requirements.txt
+
+  # Aplikacja posiada Makefile, wiec alternatywnie dla 2 ostatnich komend mozesz uzyc komendy:
+  $ make deps.
 
   # zobacz
   $ pip list
@@ -47,7 +51,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   ...
 
-  # aktywacja 
+  # aktywacja
   $ source .venv/bin/activate
   ```
 
