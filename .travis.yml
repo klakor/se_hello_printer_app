@@ -8,5 +8,3 @@ script:
   - make test
   - make docker_build
   - make docker_push
-after_succes:
-  - make docker_build
