@@ -1,5 +1,8 @@
 .PHONY: test
+.DEFAULT_GOAL := test
 USERNAME=klakor
+SERVICE_NAME=hello-world-printer
+MY_DOCKER_NAME=$(SERVICE_NAME)
 TAG=$(USERNAME)/hello-world-printer
 
 deps:
@@ -19,10 +22,16 @@ test_smoke:
 	curl -s -o /dev/null -w "%{http_code}" --fail 127.0.0.1:5000
 
 docker_build:
-	docker build -t hello-world-printer .
+	docker build -t $(MY_DOCKER_NAME) .
 
 docker_run: docker_build
-	docker run --name hello_world_printer-dev -p 5000:5000 -d hello-world-printer
+	docker run \
+			--name $(SERVICE_NAME)-dev \
+			-p 5000:5000 \
+			-d $(MY_DOCKER_NAME)
+
+docker_stop:
+	docker stop $(SERVICE_NAME)-dev
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password ${DOCKER_PASSWORD}; \
