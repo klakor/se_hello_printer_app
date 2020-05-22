@@ -20,4 +20,7 @@ class FlaskrTestCase(unittest.TestCase):
     def test_msg_with_xml_output(self):
         rv = self.app.get('/?output=xml')
 
-        self.assertEqual('<greetings>' + '\n' + '<name>' + 'Klaudia' + '</name>' + '\n' + '<msg>' + 'Hello World!' + '</msg>' + '\n' + '</greetings>', rv.data.decode())
+        self.assertEqual('<greetings>'
+                         + '\n' + '<name>' + 'Klaudia' + '</name>'
+                         + '\n' + '<msg>' + 'Hello World!' + '</msg>'
+                         + '\n' + '</greetings>', rv.data.decode())

@@ -1,4 +1,3 @@
-
 PLAIN = "plain"
 PLAIN_UP = "plain_uppercase"
 PLAIN_LO = "plain_lowercase"
@@ -30,9 +29,9 @@ def format_to_json(msg, imie):
 
 def format_to_xml(msg, imie):
     return ('<greetings>' + '\n' +
-    '<name>' + imie + '</name>' + '\n' +
-        '<msg>' + msg + '</msg>' + '\n' +
-    '</greetings>')
+            '<name>' + imie + '</name>' + '\n' +
+            '<msg>' + msg + '</msg>' + '\n' +
+            '</greetings>')
 
 
 def plain_text(msg, imie):
