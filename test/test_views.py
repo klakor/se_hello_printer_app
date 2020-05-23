@@ -21,6 +21,6 @@ class FlaskrTestCase(unittest.TestCase):
         rv = self.app.get('/?output=xml')
 
         self.assertEqual('<greetings>'
-                         + '\n' + '<name>' + 'Klaudia' + '</name>'
+                         + '\n' + '<name>' + 'Karolina' + '</name>'
                          + '\n' + '<msg>' + 'Hello World!' + '</msg>'
                          + '\n' + '</greetings>', rv.data.decode())
