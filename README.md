@@ -57,12 +57,11 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Integracja z TravisCI:
   
-  Aktualny status buildu:
   [![Build Status](https://travis-ci.org/klakor/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/klakor/se_hello_printer_app)
  
  - Integracja z StatusCake:
  
-   Aktualny status: <a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=BrHZiXbL3N&Days=1&Design=1" /></a>
+   <a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=BrHZiXbL3N&Days=1&Design=1" /></a>
 
 # Pomocnicze
 
