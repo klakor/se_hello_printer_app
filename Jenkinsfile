@@ -13,7 +13,18 @@ pipeline {
         }
         stage('Test') {
             steps {
-	            sh 'make test'
+	            sh 'make test_xunit || true'
+	            xunit tresholds: [
+	                skipped(failureTreshold: '0'),
+	                failed(failureTreshold: '1')
+	                ],
+	                tools: [
+	                    JUnit(deleteOutputFiles: true,
+	                        failIfNotNew: true,
+	                        pattern: 'test_results.xml',
+	                        skipNoTestFiles: false,
+	                        stopProcessingIfError: true)
+	                ]
         	}
         }
     }
