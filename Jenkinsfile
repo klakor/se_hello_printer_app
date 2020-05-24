@@ -14,9 +14,9 @@ pipeline {
         stage('Test') {
             steps {
 	            sh 'make test_xunit || true'
-	            xunit tresholds: [
-	                skipped(failureTreshold: '0'),
-	                failed(failureTreshold: '1')
+	            xunit thresholds: [
+	                failed(unstableThreshold: '1'),
+	                skipped(unstableThreshold: '0')
 	                ],
 	                tools: [
 	                    JUnit(deleteOutputFiles: true,
